@@ -48,10 +48,14 @@ public class LocalStocks implements Observer {
         try {
             PrintWriter bufferedWriter = new PrintWriter(new BufferedWriter(new FileWriter("Change10.dat", true)));
             bufferedWriter.println();
-            bufferedWriter.println(tickerDataArrayList.get(0).getLastUpdateTimeStamp());
+            boolean count = false;
 
             //find all that changed price more than 10%
             for (TickerData tick : tickerDataArrayList) {
+                if (count == false) {
+                    bufferedWriter.println(tick.getLastUpdateTimeStamp());
+                    count = true;
+                }
                 if (Math.abs(Double.parseDouble(tick.getPercentChange())) >= 10) {
                     bufferedWriter.println(tick.getTickerSymbol() + " " +
                             tick.getCurrentPrice() + " " + tick.getPercentChange());

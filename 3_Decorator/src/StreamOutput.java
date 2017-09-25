@@ -11,6 +11,7 @@ class StreamOutput implements Output {
     public void writeString(String s) {
         try {
             sink.write(s);
+            sink.flush();
         }
         catch (IOException ex) {
             throw new RuntimeException(ex);
