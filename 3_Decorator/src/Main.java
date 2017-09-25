@@ -46,10 +46,36 @@ public class Main {
             }
             if (choice.equals("1")) {
                 output = new LineOutput(output);
-                System.out.println("Added LineOutput Wrapper.\n");
+                System.out.println("Added LineOutput Wrapper. (each line is on a new line).\n");
             } else if (choice.equals("2")) {
-                System.out.println("This Feature not implemented yet.");
+                output = new NumberedOutput(output);
+                System.out.println("Added NumberedOutput Wrapper. (lines will be preceeded by a number)\n");
             } else if (choice.equals("3")) {
+
+                //Prompt for sedond output.
+                String choiceTeeOuput = "";
+                BufferedReader brTeeOutput = new BufferedReader(new InputStreamReader(System.in));
+                System.out.println("Name of output file (blank for console): ");
+                try {
+                    choiceTeeOuput = brTeeOutput.readLine();
+                } catch (IOException e) {
+                    System.out.println("Unable to read that line.");
+                }
+                //create second output
+                if(choiceTeeOuput.equals("")) {
+                    //add console as an output
+                    Output output2 = new StreamOutput(new PrintWriter(System.out));
+                    output = new TeeOutput(output, output2);
+                } else {
+                    //create another output
+                    try {
+                        File outFile2 = new File(choiceTeeOuput) ;
+                        Output teeOutputFile = new StreamOutput(new FileWriter(outFile2));
+                        output = new TeeOutput(output, teeOutputFile);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
                 System.out.println("This Feature not implemented yet.");
             } else if (choice.equals("4")) {
                 System.out.println("This Feature not implemented yet.");
