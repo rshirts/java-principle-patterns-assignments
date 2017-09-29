@@ -1,21 +1,15 @@
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args){
-        //check for an argument that provides a file name.
-        if (args.length < 1) {
-            System.out.println("Please provide a file name to process.");
-            System.exit(1);
-        }
 
         //Create Output File
         FileWriter outputFile = null;
 
         try {
-            File outFile = new File("DecoratedOutput.dat") ;
+            File outFile = new File("decoratedOutput.dat") ;
             outputFile = new FileWriter(outFile);
         } catch (IOException e) {
             e.printStackTrace();
@@ -38,7 +32,7 @@ public class Main {
             System.out.println("3. Wrap with TeeOutput class.");
             System.out.println("4. Wrap with FilterOuput class.");
             System.out.println("Enter a number to add wrapper.");
-            System.out.println("Press enter with empty selection to process file.");
+            System.out.println("Press enter with empty selection to continue with processing file.");
             try {
                 choice = br.readLine();
             } catch (IOException e) {
@@ -76,27 +70,61 @@ public class Main {
                         e.printStackTrace();
                     }
                 }
-                System.out.println("This Feature not implemented yet.");
             } else if (choice.equals("4")) {
-                System.out.println("This Feature not implemented yet.");
-            } else if (choice.equals("")) {
-                System.out.println("Processing File...");
-            } else {
-                System.out.println("Invalid choice.");
+                String choiceFilterOutput = null;
+                BufferedReader brFilterOutput = new BufferedReader(new InputStreamReader(System.in));
+                //reset choice
+                choiceFilterOutput = "";
+                //present menu
+                System.out.println("1. Use contains a number filter.");
+                System.out.println("2. Line Length filter.");
+                try {
+                    choiceFilterOutput = brFilterOutput.readLine();
+                } catch (IOException e) {
+                    System.out.println("Unable to read that line.");
+                }
+
+                //Apply filter
+                if (choiceFilterOutput.equals("1")){
+                    output = new FilterOutput(output, new TestContainsNumber());
+                    System.out.println("Number filter applied.");
+                } else if (choiceFilterOutput.equals("2")){
+                    output = new FilterOutput(output, new TestStringLength());
+                    System.out.println("Line length filter applied.");
+                } else {
+                    System.out.println("No filter applied.");
+                }
             }
         }
+        String filename = null;
+        boolean opened = false;
+        File inFile = null;
+        BufferedReader brInFile = new BufferedReader(new InputStreamReader(System.in));
+        Scanner scanner = null;
+        String currentLine;
 
-        //Open provided file.
-        File inFile = new File(args[0]);
-        String currentLine = "";
-        try(Scanner scanner = new Scanner(inFile)) {
-            //Process file one line at a time.
+        while (filename == null || opened == false) {
+            System.out.print("Please enter a file name to process: ");
+            try {
+                filename = brInFile.readLine();
+                inFile = new File(filename);
+                scanner = new Scanner(inFile);
+            } catch (FileNotFoundException e) {
+                System.out.println("Unable to open file with name: " + inFile.toString());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            if (scanner != null) {
+                opened = true;
+            }
+        }
+        if (opened) {
+            System.out.println("Processing File...");
             while (scanner.hasNextLine()) {
                 currentLine = scanner.nextLine();
                 output.writeString(currentLine);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Unable to open file with name: " + inFile.toString());
         }
     }
 }
