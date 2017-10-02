@@ -1,6 +1,5 @@
 class TeeOutput extends Decorator {
 
-    private int lineNumber = 1;
     Output outputTwo = null;
 
     public TeeOutput(Output op, Output opTwo) {
