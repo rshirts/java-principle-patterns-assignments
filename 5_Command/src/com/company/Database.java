@@ -15,41 +15,13 @@ public abstract class Database {
         return id;
     }
 
-    public Database() {}
+    public abstract void add(String key, String value);
 
-    void add(String key, String value) {
-        if (!database.containsKey(key)) {
-            database.put(key, value);
-        } else {
-            System.out.println("The key already exists.");
-        }
-    }
+    public abstract String get(String key);
 
-    String get (String key) {
-        if (!database.containsKey(key)) {
-            return "That key does not exist.";
-        } else {
-            return database.get(key);
-        }
-    }
+    public abstract void update(String key, String value);
 
-    void update(String key, String value) {
-        if (database.containsKey(key)) {
-            database.put(key, value);
-        } else {
-            System.out.println("That key does not exist.");
-        }
-    }
+    public abstract void remove(String key);
 
-    void remove (String key) {
-        if (!database.containsKey(key)) {
-            System.out.println("That key does not exist.");
-        } else {
-            database.remove(key);
-        }
-    }
-
-    void display() {
-        System.out.println(database.toString());
-    }
+    public abstract void display();
 }
