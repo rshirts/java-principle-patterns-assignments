@@ -64,12 +64,12 @@ public class Main {
                         //Create all the command objects.
                         switch (command) {
                             case "A":
-                                commandQueue.add(new AddCommand(new AddRemoveObject(databaseMap, databaseId, key, value)));
+                                commandQueue.add(new AddCommand(new AddObject(databaseMap, databaseId, key, value)));
                                 break;
                             case "U":
                                 break;
                             case "R":
-                                commandQueue.add(new RemoveCommand(new AddRemoveObject(databaseMap, databaseId, key, value)));
+                                commandQueue.add(new RemoveCommand(new RemoveObject(databaseMap, databaseId, key)));
                                 break;
                             case "B":
                                 break;
@@ -86,6 +86,8 @@ public class Main {
                 for (Command c : commandQueue) {
                     //run execute then push to commandProcessedStack
                     c.execute();
+                    //add the command to the list of commands run.
+                    commandStack.push(c);
                 }
 
                 //Print out the database

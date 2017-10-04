@@ -2,20 +2,17 @@ package com.company;
 
 import java.util.Map;
 
-public class AddRemoveObject {
+public class RemoveObject {
 
-    String databaseName;
-    String key;
-    String value;
+    String databaseName = "";
+    String key = "";
+    String value = "";
     Map<String, ActiveDatabase> databaseMap;
-    ActiveDatabase activeDatabase;
 
-
-    public AddRemoveObject(Map<String, ActiveDatabase> databaseMap , String databaseName, String key, String value) {
+    public RemoveObject(Map<String, ActiveDatabase> databaseMap , String databaseName, String key) {
         this.databaseMap = databaseMap;
         this.databaseName = databaseName;
         this.key = key;
-        this.value = value;
     }
 
     public void add() {
@@ -30,6 +27,8 @@ public class AddRemoveObject {
 
     public void remove() {
         if (databaseMap.containsKey(databaseName)) {
+            //need to assign the "value" of this object for the undo command which is add for this command.
+            value = databaseMap.get(databaseName).get(key);
             databaseMap.get(databaseName).remove(key);
         } else {
             System.out.println(databaseMap.toString() + "Does not exist.");

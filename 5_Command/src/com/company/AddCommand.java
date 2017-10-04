@@ -1,21 +1,21 @@
 package com.company;
 
 public class AddCommand implements Command {
-    AddRemoveObject addRemoveObject;
+    AddObject addObject;
 
-    AddCommand(AddRemoveObject addRemoveObject) {
-        this.addRemoveObject = addRemoveObject;
+    AddCommand(AddObject addObject) {
+        this.addObject = addObject;
     }
 
     @Override
     public void execute() {
-        addRemoveObject.add();
+        addObject.add();
         //todo: remove this
         System.out.println("Added Object.");
     }
 
     @Override
     public void undo() {
-        addRemoveObject.remove();
+        addObject.remove();
     }
 }
