@@ -10,6 +10,7 @@ public class Main {
 
         //Used for database and commands.
         Queue<Command> commandQueue = new ArrayDeque<>();
+        Deque<Command> commandStack = new ArrayDeque<>();
         Map<String, ActiveDatabase> databaseMap = new HashMap<>();
 
 
@@ -63,11 +64,12 @@ public class Main {
                         //Create all the command objects.
                         switch (command) {
                             case "A":
-                                commandQueue.add(new AddCommand(new AddObject(databaseMap, databaseId, key, value)));
+                                commandQueue.add(new AddCommand(new AddRemoveObject(databaseMap, databaseId, key, value)));
                                 break;
                             case "U":
                                 break;
                             case "R":
+                                commandQueue.add(new RemoveCommand(new AddRemoveObject(databaseMap, databaseId, key, value)));
                                 break;
                             case "B":
                                 break;
@@ -82,10 +84,14 @@ public class Main {
                 }
 
                 for (Command c : commandQueue) {
+                    //run execute then push to commandProcessedStack
                     c.execute();
                 }
 
-                System.out.println(databaseMap.toString());
+                //Print out the database
+                databaseMap.forEach((k,v)->{
+                    System.out.println("Database: " + k + " " + v.toString());
+                });
             }
         }
     }

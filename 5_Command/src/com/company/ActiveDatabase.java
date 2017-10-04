@@ -51,6 +51,16 @@ public class ActiveDatabase extends Database {
     }
 
     public void display() {
-        System.out.println(database.toString());
+        database.forEach((k,v)-> System.out.println("Key: " + k + " Value: " + v));
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder returnString = new StringBuilder();
+        database.forEach((k,v)->{
+            returnString.append("Key: " + k + " Value: " + v);
+        });
+
+        return returnString.toString();
     }
 }
