@@ -24,4 +24,7 @@ public abstract class Database {
     public abstract void remove(String key);
 
     public abstract void display();
+
+    @Override
+    public abstract String toString();
 }

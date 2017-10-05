@@ -13,19 +13,17 @@ public class Main {
         Deque<Command> commandStack = new ArrayDeque<>();
         Map<String, ActiveDatabase> databaseMap = new HashMap<>();
 
-
         //used for parsing each line of the file.
         String selection = "";
         Scanner mainScanner = new Scanner(System.in);
         BufferedReader br;
         File file = null;
-        String currentLine;
+        String currentLine = "";
         String[] splitString;
         String command = "";
-        String databaseId = null;
-        String key = null;
-        String value = null;
-
+        String databaseId = "";
+        String key = "";
+        String value = "";
 
         while(!selection.equals("q")) {
             System.out.println("Please provide a file to process.");
@@ -39,6 +37,7 @@ public class Main {
 
                     //Process the file
                     while((currentLine = br.readLine()) != null) {
+
                         splitString = currentLine.split("\\s+");
 
                         //Parse the string.
@@ -56,8 +55,14 @@ public class Main {
 
                         if (splitString.length >= 4) {
                             int i = 3;
+                            //reset values value
+                            value = "";
                             while (i < splitString.length) {
                                 value += splitString[i++];
+                                if (i <= splitString.length - 1) {
+                                    value += " ";
+                                }
+
                             }
                         }
 
@@ -67,6 +72,7 @@ public class Main {
                                 commandQueue.add(new AddCommand(new AddObject(databaseMap, databaseId, key, value)));
                                 break;
                             case "U":
+                                commandQueue.add(new UpdateCommand(new UpdateObject(databaseMap, databaseId, key, value)));
                                 break;
                             case "R":
                                 commandQueue.add(new RemoveCommand(new RemoveObject(databaseMap, databaseId, key)));
@@ -77,6 +83,10 @@ public class Main {
                                 break;
                         }
                     }
+
+                    //close file opened.
+                    br.close();
+
                 } catch (FileNotFoundException f) {
                     System.out.println("File not found: " + file);
                 } catch (IOException e) {
@@ -88,6 +98,17 @@ public class Main {
                     c.execute();
                     //add the command to the list of commands run.
                     commandStack.push(c);
+                }
+
+                //Print out the database
+                databaseMap.forEach((k,v)->{
+                    System.out.println("Database: " + k + " " + v.toString());
+                });
+
+                Command undoCommand;
+                while(!commandStack.isEmpty()) {
+                    undoCommand =  commandStack.pop();
+                    undoCommand.undo();
                 }
 
                 //Print out the database

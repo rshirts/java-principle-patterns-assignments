@@ -18,11 +18,11 @@ public class RemoveObject {
     public void add() {
         if (databaseMap.containsKey(databaseName)) {
             databaseMap.get(databaseName).add(key, value);
+            System.out.println("Undid Remove: \n\tKey: " + key + " Value: " + value);
         } else {
             databaseMap.put(databaseName, new ActiveDatabase(databaseName));
             databaseMap.get(databaseName).add(key, value);
         }
-        //todo: we need to add a remove object to the undo stack.
     }
 
     public void remove() {
@@ -30,8 +30,6 @@ public class RemoveObject {
             //need to assign the "value" of this object for the undo command which is add for this command.
             value = databaseMap.get(databaseName).get(key);
             databaseMap.get(databaseName).remove(key);
-        } else {
-            System.out.println(databaseMap.toString() + "Does not exist.");
         }
     }
 }

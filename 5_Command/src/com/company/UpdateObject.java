@@ -23,14 +23,12 @@ public class UpdateObject {
             previousValue = databaseMap.get(databaseName).get(key);
             databaseMap.get(databaseName).update(key, value);
         }
-        //todo: we need to add a remove object to the undo stack.
     }
 
     public void undo() {
         if (databaseMap.containsKey(databaseName)) {
             databaseMap.get(databaseName).update(key, previousValue);
-        } else {
-            System.out.println(databaseMap.toString() + "Does not exist.");
+            System.out.println("Undid Update: \n\tKey: " + key + " Value: " + value);
         }
     }
 }

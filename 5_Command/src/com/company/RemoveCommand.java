@@ -10,8 +10,6 @@ public class RemoveCommand implements Command {
     @Override
     public void execute() {
         removeObject.remove();
-        //todo: Remove this
-        System.out.println("removed an item.");
     }
 
     @Override

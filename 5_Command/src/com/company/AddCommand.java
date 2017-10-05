@@ -10,8 +10,6 @@ public class AddCommand implements Command {
     @Override
     public void execute() {
         addObject.add();
-        //todo: remove this
-        System.out.println("Added Object.");
     }
 
     @Override

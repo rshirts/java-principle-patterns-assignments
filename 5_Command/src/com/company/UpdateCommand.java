@@ -10,8 +10,6 @@ public class UpdateCommand implements Command {
     @Override
     public void execute() {
         updateObject.update();
-        //todo: remove this
-        System.out.println("Added Object.");
     }
 
     @Override

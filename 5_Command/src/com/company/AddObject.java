@@ -24,14 +24,12 @@ public class AddObject {
             databaseMap.put(databaseName, new ActiveDatabase(databaseName));
             databaseMap.get(databaseName).add(key, value);
         }
-        //todo: we need to add a remove object to the undo stack.
     }
 
     public void remove() {
         if (databaseMap.containsKey(databaseName)) {
             databaseMap.get(databaseName).remove(key);
-        } else {
-            System.out.println(databaseMap.toString() + "Does not exist.");
+            System.out.println("Undid Add: \n\tKey: " + key + " Value: " + value);
         }
     }
 }
