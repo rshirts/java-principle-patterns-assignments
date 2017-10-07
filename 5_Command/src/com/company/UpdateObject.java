@@ -8,26 +8,26 @@ public class UpdateObject {
     String key;
     String value;
     String previousValue = "";
-    Map<String, ActiveDatabase> databaseMap;
+    DatabaseMap databaseMap;
 
-    public UpdateObject(Map<String, ActiveDatabase> databaseMap , String databaseName, String key, String value) {
+    public UpdateObject(DatabaseMap databaseMap, CommandInfo commandInfo) {
         this.databaseMap = databaseMap;
-        this.databaseName = databaseName;
-        this.key = key;
-        this.value = value;
+        this.databaseName = commandInfo.databaseId;
+        this.key = commandInfo.key;
+        this.value = commandInfo.value;
     }
 
     public void update() {
-        if (databaseMap.containsKey(databaseName)) {
+        if (databaseMap.map.containsKey(databaseName)) {
             //save old value for undo
-            previousValue = databaseMap.get(databaseName).get(key);
-            databaseMap.get(databaseName).update(key, value);
+            previousValue = databaseMap.map.get(databaseName).get(key);
+            databaseMap.map.get(databaseName).update(key, value);
         }
     }
 
     public void undo() {
-        if (databaseMap.containsKey(databaseName)) {
-            databaseMap.get(databaseName).update(key, previousValue);
+        if (databaseMap.map.containsKey(databaseName)) {
+            databaseMap.map.get(databaseName).update(key, previousValue);
             System.out.println("Undid Update: \n\tKey: " + key + " Value: " + value);
         }
     }
