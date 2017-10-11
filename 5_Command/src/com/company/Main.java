@@ -8,24 +8,18 @@ public class Main {
     // Main is the client creates concrete command objects.
     public static void main(String[] args) {
 
-        //Used for database and commands.
+        //Data Structures
         Queue<Command> commandQueue = new ArrayDeque<>();
         Deque<Command> commandStack = new ArrayDeque<>();
-        Map<String, ActiveDatabase> databaseMap = new HashMap<>();
+        DatabaseMap databaseMap = new DatabaseMap();
+        CommandFactory commandFactory = new CommandFactory(databaseMap);
 
-
-        //used for parsing each line of the file.
+        //File info
         String selection = "";
         Scanner mainScanner = new Scanner(System.in);
         BufferedReader br;
         File file = null;
-        String currentLine;
-        String[] splitString;
-        String command = "";
-        String databaseId = null;
-        String key = null;
-        String value = null;
-
+        String currentLine = "";
 
         while(!selection.equals("q")) {
             System.out.println("Please provide a file to process.");
@@ -39,44 +33,17 @@ public class Main {
 
                     //Process the file
                     while((currentLine = br.readLine()) != null) {
-                        splitString = currentLine.split("\\s+");
-
-                        //Parse the string.
-                        if (splitString.length >= 1 ) {
-                            command = splitString[0];
-                        }
-
-                        if (splitString.length >= 2) {
-                            databaseId = splitString[1];
-                        }
-
-                        if (splitString.length >= 3) {
-                            key = splitString[2];
-                        }
-
-                        if (splitString.length >= 4) {
-                            int i = 3;
-                            while (i < splitString.length) {
-                                value += splitString[i++];
-                            }
-                        }
-
-                        //Create all the command objects.
-                        switch (command) {
-                            case "A":
-                                commandQueue.add(new AddCommand(new AddObject(databaseMap, databaseId, key, value)));
-                                break;
-                            case "U":
-                                break;
-                            case "R":
-                                commandQueue.add(new RemoveCommand(new RemoveObject(databaseMap, databaseId, key)));
-                                break;
-                            case "B":
-                                break;
-                            case "E":
-                                break;
+                        //batch command can return null objects don't add them to the queue
+                        Command command = null;
+                        command = commandFactory.getCommand(currentLine);
+                        if (command != null) {
+                            commandQueue.add(command);
                         }
                     }
+
+                    //close file opened.
+                    br.close();
+
                 } catch (FileNotFoundException f) {
                     System.out.println("File not found: " + file);
                 } catch (IOException e) {
@@ -90,11 +57,18 @@ public class Main {
                     commandStack.push(c);
                 }
 
-                //Print out the database
-                databaseMap.forEach((k,v)->{
-                    System.out.println("Database: " + k + " " + v.toString());
-                });
+                databaseMap.printMap();
+
+                Command undoCommand;
+                while(!commandStack.isEmpty()) {
+                    undoCommand =  commandStack.pop();
+                    undoCommand.undo();
+                }
+
+                databaseMap.printMap();
             }
         }
     }
+
+
 }

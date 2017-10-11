@@ -56,9 +56,11 @@ public class ActiveDatabase extends Database {
 
     @Override
     public String toString() {
+
         StringBuilder returnString = new StringBuilder();
+        System.out.println("Printing Database...");
         database.forEach((k,v)->{
-            returnString.append("Key: " + k + " Value: " + v);
+            returnString.append("\n\t" + "Key: " + k + " Value: " + v );
         });
 
         return returnString.toString();

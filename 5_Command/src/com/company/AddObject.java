@@ -7,31 +7,29 @@ public class AddObject {
     String databaseName;
     String key;
     String value;
-    Map<String, ActiveDatabase> databaseMap;
+    DatabaseMap databaseMap;
 
 
-    public AddObject(Map<String, ActiveDatabase> databaseMap , String databaseName, String key, String value) {
+    public AddObject(DatabaseMap databaseMap, CommandInfo commandInfo) {
         this.databaseMap = databaseMap;
-        this.databaseName = databaseName;
-        this.key = key;
-        this.value = value;
+        this.databaseName = commandInfo.databaseId;
+        this.key = commandInfo.key;
+        this.value = commandInfo.value;
     }
 
     public void add() {
-        if (databaseMap.containsKey(databaseName)) {
-            databaseMap.get(databaseName).add(key, value);
+        if (databaseMap.map.containsKey(databaseName)) {
+            databaseMap.map.get(databaseName).add(key, value);
         } else {
-            databaseMap.put(databaseName, new ActiveDatabase(databaseName));
-            databaseMap.get(databaseName).add(key, value);
+            databaseMap.map.put(databaseName, new ActiveDatabase(databaseName));
+            databaseMap.map.get(databaseName).add(key, value);
         }
-        //todo: we need to add a remove object to the undo stack.
     }
 
     public void remove() {
-        if (databaseMap.containsKey(databaseName)) {
-            databaseMap.get(databaseName).remove(key);
-        } else {
-            System.out.println(databaseMap.toString() + "Does not exist.");
+        if (databaseMap.map.containsKey(databaseName)) {
+            databaseMap.map.get(databaseName).remove(key);
+            System.out.println("Undid Add: \n\tKey: " + key + " Value: " + value);
         }
     }
 }
