@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="6_Adapter:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="397678ca-3063-4fea-a53f-4c062433ee92" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,19 +20,97 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+            <state relative-caret-position="306">
+              <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shape.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Shape.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="e#97#98#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Line.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Line.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#96#97#0" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XXCirlceAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/XXCirlceAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#241#242#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rectangle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Rectangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#101#102#0" expanded="true" />
+                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XXCircle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/XXCircle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#839#840#0" expanded="true" />
+                <element signature="e#867#868#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,6 +124,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -49,15 +135,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/com/company/Line.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Point.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Shape.java" />
+        <option value="$PROJECT_DIR$/src/com/company/XXCircle.java" />
+        <option value="$PROJECT_DIR$/src/com/company/XXCirlceAdapter.java" />
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+>>>>>>> 5bf92fed5c627d415682872433a5d53c6ad25136
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -73,9 +171,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+=======
+>>>>>>> 5bf92fed5c627d415682872433a5d53c6ad25136
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -99,7 +200,19 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+>>>>>>> 5bf92fed5c627d415682872433a5d53c6ad25136
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -145,6 +258,11 @@
       <envs />
       <method />
     </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -168,7 +286,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-11" y="-11" width="2182" height="1402" extended-state="7" />
+=======
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+>>>>>>> 5bf92fed5c627d415682872433a5d53c6ad25136
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -178,12 +300,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358853" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20563674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 5bf92fed5c627d415682872433a5d53c6ad25136
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -194,6 +325,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 5bf92fed5c627d415682872433a5d53c6ad25136
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -208,6 +343,90 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#97#98#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/XXCircle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/XXCirlceAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
@@ -216,12 +435,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#97#98#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -238,5 +508,121 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/XXCircle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/XXCirlceAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>6_Adapter:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>6_Adapter</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+>>>>>>> 5bf92fed5c627d415682872433a5d53c6ad25136
   </component>
 </project>
